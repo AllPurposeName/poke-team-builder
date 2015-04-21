@@ -10,7 +10,33 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_self
  *= require jquery-ui
+ *= require_self
  *= require_tree .
  */
+#header {
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:2%;
+  float:top;
+}
+#nav {
+  line-height:30px;
+  background-color:#eeeeee;
+  float:left;
+  padding:5%;
+}
+#section {
+  width:350px;
+  height: 10%;
+  float:left;
+  padding:10px;
+}
+#footer {
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  padding:3%;
+}

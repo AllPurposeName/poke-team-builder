@@ -1,0 +1,24 @@
+<%= form_for("butt") do |f| %>
+  <%= f.label :name, "edit name" %>
+  <%= f.text_field :name %>
+
+  <%= "Change your Username:" %>
+  <%= f.label :description, "edit description" %>
+  <%= f.text_field :description %>
+
+  <%= "Change your Contact info" %>
+  <%= "Email" %>
+  <%= f.label :price, "edit price" %>
+  <%= f.text_field :price %>
+
+  <%= "Phone" %>
+  <%= f.label :image_path, "edit image_path" %>
+  <%= f.text_field :image_path %>
+
+  <%= "Address" %>
+  <%= f.label :retired, "edit retired" %>
+  <div data-garment="<%= "id" %>">
+    <%= select("garment_", "retire_updater", ["butt", true, false].uniq, {include_blank: false}) %>
+  </div>
+  <%= f.submit "Submit" %>
+<% end %>
