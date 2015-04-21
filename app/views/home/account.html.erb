@@ -1,24 +1,40 @@
 <%= form_for("butt") do |f| %>
-  <%= f.label :name, "edit name" %>
-  <%= f.text_field :name %>
-
   <%= "Change your Username:" %>
-  <%= f.label :description, "edit description" %>
-  <%= f.text_field :description %>
+  <br>
+  <ul><li><%= f.label :username%>
+  <%= f.text_field :username, placeholder: "Current Name"  %>
+  </li>
+  <br>
+  <li><%= f.label :description%>
+  <%= f.text_field :description, placeholder: "Current Description"  %>
+  </li></ul>
+<br>
 
-  <%= "Change your Contact info" %>
-  <%= "Email" %>
-  <%= f.label :price, "edit price" %>
-  <%= f.text_field :price %>
+  <%= "Change your Contact info:" %>
+  <br>
+  <ul><li><%= f.label :email%>
+  <%= f.text_field :email, placeholder: "Current Email"  %>
+  </li>
 
-  <%= "Phone" %>
-  <%= f.label :image_path, "edit image_path" %>
-  <%= f.text_field :image_path %>
+  <br>
+  <li><%= f.label :phone_number%>
+  <%= f.text_field :phone_number, placeholder: "Current Phone Number"  %>
+  </li>
 
-  <%= "Address" %>
-  <%= f.label :retired, "edit retired" %>
+  <br>
+  <li><%= f.label :address%>
+  <%= f.text_field :address, placeholder: "Current Address"  %>
+  </li>
+  <br>
+
+  <li><%= f.label :address%>
+  <%= f.text_field :address, placeholder: "Current Address"  %>
+  </li></ul>
+
   <div data-garment="<%= "id" %>">
-    <%= select("garment_", "retire_updater", ["butt", true, false].uniq, {include_blank: false}) %>
+
+  <%= f.label :favorite_body_part%>
+    <%= select("garment_", "retire_updater", ["butt", "arm", "neckbeard"].uniq, {include_blank: false}) %>
   </div>
   <%= f.submit "Submit" %>
 <% end %>
