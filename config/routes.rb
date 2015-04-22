@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/about/', to: "home#about"
   get '/login/', to: "sessions#login"
   get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: "sessions#fail"
 end
