@@ -1,0 +1,17 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body {
+  background-image: url("background.png");
+  background-color: #F3F3F3;
+}
+
+#footer {
+  background-color:black;
+  opacity: 0.5;
+  color:white;
+  clear:both;
+  text-align:center;
+  float:top;
+  width: 100%;
+  padding:3%;
+}
