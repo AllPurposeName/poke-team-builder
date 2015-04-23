@@ -7,22 +7,16 @@
     <%= csrf_meta_tags %>
 
 
-      </head>
-        <div id="header">
-          <h1>Reader Me(e)ter</h1>
-          <h3>Current Topic</h3>
-        </div>
+  </head>
 
-        <div id="nav">
-          <%= render "layouts/nav" %>
-        </div>
+  <%= render current_user.partial %>
 
-        <div id="section">
-          <%= yield %>
-        </div>
-
-        <div id="footer">
-          Contact Us
-        </div>
-      </body>
+  <nav class="navbar-fixed-bottom">
+  <div class="container">
+    <div id="footer">
+      Contact Us
+    </div>
+  </div>
+  </nav>
+</body>
     </html>

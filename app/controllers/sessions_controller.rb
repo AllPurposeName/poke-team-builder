@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(auth_hash)
     user.save
+    binding.pry
     session[:user_id] = user.id
     redirect_to root_path
   end
@@ -10,9 +11,11 @@ class SessionsController < ApplicationController
 binding.pry
   end
 
-  def login
-
+  def exit
+    session.clear
+    redirect_to root_path
   end
+
   protected
 
   def auth_hash

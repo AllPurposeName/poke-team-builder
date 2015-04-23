@@ -14,10 +14,6 @@
  *= require_tree .
  *= require_self
  */
-body {
-  background-image: url("background.png");
-  background-color: #F3F3F3;
-}
 
 #header {
   background-color:black;
@@ -39,12 +35,4 @@ body {
   height: 10%;
   float:left;
   padding:10px;
-}
-#footer {
-  background-color:black;
-  opacity: 0.5;
-  color:white;
-  clear:both;
-  text-align:center;
-  padding:3%;
 }

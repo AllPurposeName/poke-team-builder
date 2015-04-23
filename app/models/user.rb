@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
     user.last_name  = auth.info.last_name
     user.email      = auth.info.email
     user.image      = auth.info.image
+    #user.link       = auth.info.urls
+    #user.gender     = auth.extra.gender
+    user
   end
 
 end
