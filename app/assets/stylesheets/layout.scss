@@ -1,12 +1,41 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-family {
+  font-family: "PokemonSolid";
+  src: local("*./fonts/pokemonsolid.ttf")
+}
+
 body {
-  background-image: url("background.png");
-  background-color: #F3F3F3;
+}
+
+.front-page {
+  background-image: image-url("front-background3.png");
+  background-size: 100vw, 100vh auto;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.front-description {
+  padding-top: 30vh;
+}
+
+.indices {
+  background-image: image-url("blind-pikachu.jpg");
+  background-size: 100vw, 100vh auto;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.attack-menu-btn {
+  text-align: 58vh, 25vh;
+  padding-left: 25vh;
+
 }
 
 #footer {
-  background-color:black;
+  background-image: image-url("footer.png");
+  background-size: cover;
   opacity: 0.5;
   color:white;
   clear:both;

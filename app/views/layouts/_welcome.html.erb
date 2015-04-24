@@ -1,15 +1,13 @@
-<div class="front-page">
+<div class="container-fluid front-page">
+  <div class="row">
+    <h1 class="text-center front-description">LOGIN PLESSE YO</h1>
 
-  <header id="top" class="header">
-  <div class="text-vertical-center">
-    <h1>because you don't have to
-      <br>  wear what your
-      <br> mother gave you</h1>
-    <br>
-    <br>
-    <br>
+    <div class="col-sm-6 col-sm-6-offset">
+      <%= link_to "LOGIN", '/auth/gplus', method: :get, class: "attack-menu-btn" %>
+    </div>
+
   </div>
-  </header>
-  <%#=image_tag("background_blur.jpg", alt: "blurred image of a black and white library with a few books in focus")%>
+
+
 
 </div>
