@@ -3,21 +3,29 @@
 
 @font-family {
   font-family: "PokemonSolid";
-  src: local("*./fonts/pokemonsolid.ttf")
+  src: local("*./fonts/PokemonSolid.ttf")
 }
 
 body {
 }
 
-.front-page {
-  background-image: image-url("front-background3.png");
-  background-size: 100vw, 100vh auto;
-  background-position: bottom;
-  height: 100vh;
+.fronter-page{
+  height:64vh;
+  width: 98.8vw;
+}
+
+.bottom-box {
+  background-image: image-url("bottombox.png");
+  display: block;
+  background-size: cover;
+  height: 33.5vh;
+  width: 100vw;
+  background-repeat: no-repeat;
 }
 
 .front-description {
   padding-top: 30vh;
+  font-family: 'PokemonSolid';
 }
 
 .indices {
