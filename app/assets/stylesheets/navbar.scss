@@ -1,0 +1,22 @@
+.nav-background {
+  opacity: 0.5;
+  background-image: image-url("footer.png");
+  background-size: 100vw 105px, contain;
+  background-repeat: no-repeat;
+}
+
+.nav-font {
+color: white;
+}
+
+#footer {
+  background-image: image-url("bot-footer.png");
+  background-size: 103vw 52px, contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  display: block;
+  color:red;
+  clear:both;
+  padding: 2%;
+  text-align:right;
+}

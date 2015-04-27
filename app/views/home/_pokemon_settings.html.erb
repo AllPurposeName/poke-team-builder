@@ -1,0 +1,41 @@
+<%= form_for("butt") do |f| %>
+  <%= "Type" %>
+  <br>
+  <ul><li><%= f.label :type%>
+  <%= f.text_field :type, placeholder: "Fire"  %>
+  </li>
+  <br>
+  <li><%= f.label :egg_group%>
+  <%= f.text_field :egg_group, placeholder: "Monster, Field"  %>
+  </li></ul>
+<br>
+
+  <%= "Region/Game" %>
+  <br>
+  <ul><li><%= f.label :region%>
+  <%= f.text_field :region, placeholder: "Kanto / Red & Blue"  %>
+  </li>
+
+  <br>
+  <%= "Specifics" %>
+  <li><%= f.label :national_number%>
+  <%= f.text_field :national_number, placeholder: "4"  %>
+  </li>
+
+  <br>
+  <li><%= f.label :move%>
+  <%= f.text_field :move, placeholder: "move"  %>
+  </li>
+  <br>
+
+  <li><%= f.label :abilities%>
+  <%= f.text_field :abilities, placeholder: "Fire Butt"  %>
+  </li></ul>
+
+  <div data-garment="<%= "id" %>">
+
+  <%= f.label :favorite_body_part%>
+    <%= select("garment_", "retire_updater", ["butt", "arm", "neckbeard"].uniq, {include_blank: false}) %>
+  </div>
+  <%= f.submit "Submit" %>
+<% end %>

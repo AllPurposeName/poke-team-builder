@@ -1,17 +1,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body {
-  background-image: url("background.png");
-  background-color: #F3F3F3;
+
+@font-family {
+  font-family: "PokemonSolid";
+  src: local("*./fonts/PokemonSolid.ttf")
 }
 
-#footer {
-  background-color:black;
-  opacity: 0.5;
-  color:white;
-  clear:both;
-  text-align:center;
-  float:top;
-  width: 100%;
-  padding:3%;
+body {
 }
+
+.fronter-page{
+  height:64vh;
+  width: 98.8vw;
+}
+
+.bottom-box {
+  background-image: image-url("bottombox.png");
+  display: block;
+  background-size: cover;
+  height: 33.5vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
+.front-description {
+  padding-top: 30vh;
+  font-family: 'PokemonSolid';
+}
+
+.attack-menu-btn {
+  text-align: 58vh, 25vh;
+  padding-left: 25vh;
+
+}
+
