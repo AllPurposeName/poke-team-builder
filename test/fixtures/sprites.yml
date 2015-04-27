@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  national_id: 1
+  name: MyString
+  image: MyString
+
+two:
+  national_id: 1
+  name: MyString
+  image: MyString

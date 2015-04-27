@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  national_id: 1
+  name: MyString
+  ineffective: MyString
+  no_effect: MyString
+  super_effective: MyString
+  weakness: MyString
+
+two:
+  national_id: 1
+  name: MyString
+  ineffective: MyString
+  no_effect: MyString
+  super_effective: MyString
+  weakness: MyString
