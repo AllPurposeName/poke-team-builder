@@ -28,27 +28,9 @@ body {
   font-family: 'PokemonSolid';
 }
 
-.indices {
-  background-image: image-url("blind-pikachu.jpg");
-  background-size: 100vw, 100vh auto;
-  background-position: bottom;
-  height: 100vh;
-}
-
 .attack-menu-btn {
   text-align: 58vh, 25vh;
   padding-left: 25vh;
 
 }
 
-#footer {
-  background-image: image-url("footer.png");
-  background-size: cover;
-  opacity: 0.5;
-  color:white;
-  clear:both;
-  text-align:center;
-  float:top;
-  width: 100%;
-  padding:3%;
-}

@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+@pokemon = %w(bulbasaur.png bulbasaur.png bulbasaur.png bulbasaur.png bulbasaur.png bulbasaur.png )
   end
 
   def account

@@ -1,7 +1,12 @@
-  <h1>Who's That Pokemon?!</h1>
-  <p>
-  <%=image_tag("charmander.png", alt: "He's orange", class: "img-responsive, center-block")%>
-  </p>
-
-<%= render 'pokemon_settings' %>
-<%= render 'moves' %>
+<div class="container-fluid">
+  <div class="row team-row">
+    <div class="col-md-6">
+      PO PO PO PO PO PO
+    </div>
+  </div>
+  <div class="row poke-display">
+    <% @pokemon.each do |poke| %>
+      <%= image_tag "#{poke}", class: "col-md-3" %>
+    <% end %>
+  </div>
+</div>

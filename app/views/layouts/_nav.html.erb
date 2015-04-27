@@ -1,8 +1,30 @@
-<div class="row">
-  <div class="col-sm-6 divider"><%= link_to "EXIT", exit_path %></div>
-  <div class="col-sm-6"><%= link_to "ABOUT US", about_path %></div>
-</div>
-<%= link_to "ACCOUNT", account_path %><br>
-<%= link_to "HOME", root_path %><br>
-<%= link_to "GOOGLE LOGIN", 'auth/gplus' %>
-<%= link_to "FAVORITES", favorites_path %>
+<nav class="navbar navbar-default nav-background">
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Poketeam</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Help</a></li>
+      <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Team <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Type Resistances</a></li>
+        <li><a href="#">Type Coverage</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Inspect</a></li>
+      </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>

@@ -1,23 +1,11 @@
-<div class="indices">
+<div class="index-<%=rand(10) %>">
 
-  <div id="header">
-    <h1>Reader Me(e)ter</h1>
-    <h3>Current Topic</h3>
-  </div>
-
-  <div id="nav">
-    <%= render "layouts/nav" %>
-  </div>
+  <%= render "layouts/nav" %>
 
   <div id="section container-fluid">
     <%= yield %>
   </div>
-  <div class="container-fluid">
-  <nav class="row">
-    <div id="footer">
-      Contact Us
-    </div>
-  </div>
-  </nav>
+
+  <%= render "layouts/footer" %>
 
 </div>
