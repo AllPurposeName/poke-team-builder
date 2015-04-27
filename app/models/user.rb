@@ -12,5 +12,4 @@ class User < ActiveRecord::Base
     #user.gender     = auth.extra.gender
     user
   end
-
 end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accuracy: 1
+  power: 1
+  pp: 1
+  description: MyText
+  category: MyString
+  name: MyString
+  national_id: 1
+
+two:
+  accuracy: 1
+  power: 1
+  pp: 1
+  description: MyText
+  category: MyString
+  name: MyString
+  national_id: 1
