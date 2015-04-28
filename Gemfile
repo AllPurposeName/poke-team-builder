@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'omniauth-twitter'
 gem 'figaro'
 gem 'rails', '4.2.0'
 gem 'pg'
