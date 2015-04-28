@@ -33,7 +33,7 @@ gem 'launchy'
 gem 'pry'
 gem 'better_errors'
 gem 'brakeman', :require => false
-
+gem 'mocha'
 gem 'web-console', '~> 2.0'
 
 gem 'spring'

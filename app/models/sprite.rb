@@ -5,7 +5,7 @@ class Sprite < ActiveRecord::Base
     sprite = self.new()
     sprite.national_id = poke_struct.national_id
     sprite.name = poke_struct.name
-    sprite.image = poke_struct.image
+    sprite.image = "http://pokeapi.co#{poke_struct.image}"
     sprite.save
   end
 end

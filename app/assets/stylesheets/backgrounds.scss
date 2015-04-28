@@ -1,9 +1,20 @@
+.team-row {
+  background-color: transparent;
+}
+
+.pokemon-display {
+  size:100% 200%;
+  background-color: blue;
+  background-color:rgba(0, 0, 0, 0.10)
+
+}
+
 .index-1 {
   background-image: image-url("growlth.jpg");
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-2 {
@@ -11,7 +22,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-3 {
@@ -19,7 +30,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-4 {
@@ -27,7 +38,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-5 {
@@ -35,7 +46,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-6 {
@@ -43,7 +54,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-7 {
@@ -51,7 +62,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-8 {
@@ -59,7 +70,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-9 {
@@ -67,7 +78,7 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .index-0 {
@@ -75,14 +86,5 @@
   background-size: contain;
   background-position: bottom;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
-
-.index-7 {
-  background-image: image-url("dratini.jpg");
-  background-size: contain;
-  background-position: bottom;
-  background-attachment: fixed;
-  height: 100vh;
-}
-
