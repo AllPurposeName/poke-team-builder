@@ -6,7 +6,8 @@
   </div>
   <div class="row poke-display">
     <% @pokemon.each do |poke| %>
-      <%= image_tag "#{poke}", class: "col-md-3" %>
+      <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle" %>
+      <%= poke.name %>
     <% end %>
   </div>
 </div>

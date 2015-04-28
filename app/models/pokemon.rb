@@ -15,6 +15,7 @@ class Pokemon < ActiveRecord::Base
     pokemon.name = poke_struct.name
     pokemon.save
     pokemon.set_image(poke_struct)
+    pokemon
   end
 
   def set_image(poke_struct)

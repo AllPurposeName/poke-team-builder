@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-@pokemon = %w(bulbasaur.png bulbasaur.png bulbasaur.png bulbasaur.png bulbasaur.png bulbasaur.png )
+    @pokemon = Pokemon.includes(:sprites).includes(:moves).all
   end
 
   def account

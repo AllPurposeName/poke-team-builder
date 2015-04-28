@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  national_id: 1
-  special_attack: 1
-  special_defense: 1
-  attack: 1
-  defense: 1
-  speed: 1
-  hit_points: 1
-  name: MyString
+#one:
+#  national_id: 1
+#  special_attack: 1
+#  special_defense: 1
+#  attack: 1
+#  defense: 1
+#  speed: 1
+#  hit_points: 1
+#  name: MyString
 
-two:
-  national_id: 1
-  special_attack: 1
-  special_defense: 1
-  attack: 1
-  defense: 1
-  speed: 1
-  hit_points: 1
-  name: MyString
+#two:
+#  national_id: 1
+#  special_attack: 1
+#  special_defense: 1
+#  attack: 1
+#  defense: 1
+#  speed: 1
+#  hit_points: 1
+#  name: MyString
