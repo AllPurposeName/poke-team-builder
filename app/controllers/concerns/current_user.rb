@@ -1,9 +1,9 @@
 class CurrentUser
-attr_reader :user, :partial
+  attr_reader :user, :partial
 
-def initialize(user)
-  @user = user
-end
+  def initialize(user)
+    @user = user
+  end
 
   def partial
     if user.nil?
@@ -11,5 +11,9 @@ end
     else
       "layouts/main"
     end
+  end
+
+  def image
+    user.image
   end
 end
