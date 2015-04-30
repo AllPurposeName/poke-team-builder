@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428193126) do
+ActiveRecord::Schema.define(version: 20150429053316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 20150428193126) do
     t.integer "pokemon_id"
     t.integer "move_id"
   end
+
+  create_table "pokemon_teams", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "pokemon_id"
+  end
+
+  add_index "pokemon_teams", ["pokemon_id"], name: "index_pokemon_teams_on_pokemon_id", using: :btree
+  add_index "pokemon_teams", ["team_id"], name: "index_pokemon_teams_on_team_id", using: :btree
 
   create_table "pokemons", force: :cascade do |t|
     t.integer  "national_id"
@@ -62,6 +70,14 @@ ActiveRecord::Schema.define(version: 20150428193126) do
   end
 
   add_index "sprites", ["pokemon_id"], name: "index_sprites_on_pokemon_id", using: :btree
+
+  create_table "teams", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "teams", ["user_id"], name: "index_teams_on_user_id", using: :btree
 
   create_table "types", force: :cascade do |t|
     t.integer  "national_id"

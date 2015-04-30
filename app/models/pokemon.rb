@@ -1,7 +1,9 @@
 class Pokemon < ActiveRecord::Base
-  has_many :pokemon_moves
-  has_many :moves, through: :pokemon_moves, inverse_of: :pokemon
-  has_many :sprites
+  has_many :pokemon_moves, inverse_of: :pokemon
+  has_many :moves, through: :pokemon_moves, inverse_of: :pokemons
+  has_many :pokemon_teams, inverse_of: :pokemon
+  has_many :teams, through: :pokemon_teams, inverse_of: :pokemons
+  has_many :sprites, inverse_of: :pokemon
 
   def self.make_new(poke_struct)
     pokemon = self.new()

@@ -1,5 +1,5 @@
 class CurrentUser
-  attr_reader :user, :partial
+  attr_reader :user, :partial, :id
 
   def initialize(user)
     @user = user
@@ -14,6 +14,10 @@ class CurrentUser
   end
 
   def image
-    user.image
+    if user.nil?
+      "img"
+    else
+      user.image
+    end
   end
 end
