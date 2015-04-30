@@ -2,22 +2,18 @@ class CurrentUser
   attr_reader :user, :partial, :id
 
   def initialize(user)
-    @user = user
+    @user = user || Guest.new
   end
 
   def partial
-    if user.nil?
-      "layouts/welcome"
-    else
-      "layouts/main"
-    end
+    user.nil? || "layouts/main"
   end
 
   def image
-    if user.nil?
-      "img"
-    else
-      user.image
-    end
+    user.image
+  end
+
+  def team
+    user.team.id
   end
 end
