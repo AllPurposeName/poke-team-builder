@@ -1,7 +1,12 @@
 class User < ActiveRecord::Base
   has_one :team, inverse_of: :user
   after_create :set_team
-  def self.create_from_omniauth(auth)
+  def self.find_or_create_from_omniauth(auth)
+    user = self.find_by(uid: auth.uid) || self.create_with_auth(auth)
+    user
+  end
+
+  def self.create_with_auth(auth)
     user = self.new()
     user.uid        = auth.uid
     user.name       = auth.info.name
