@@ -21,6 +21,6 @@ class ActiveSupport::TestCase
   OmniAuth.config.add_mock(:twitter, omniauth_hash)
 
   def login_user
-    ApplicationController.any_instance.mocha.stubs(:current_user).with(CurrentUser.new(User.create_from_omniauth(OmniAuth.config.mock_auth[:twitter])))
+    ApplicationController.any_instance.mocha.stubs(:current_user).with(CurrentUser.new(User.find_or_create_from_omniauth(OmniAuth.config.mock_auth[:twitter])))
   end
 end

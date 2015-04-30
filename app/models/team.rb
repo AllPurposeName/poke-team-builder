@@ -12,6 +12,10 @@ class Team < ActiveRecord::Base
     self.pokemons.count
   end
 
+  def remove(pokemon_id)
+    self.pokemons.delete(Pokemon.find(pokemon_id))
+  end
+
   private
 
   def full?
