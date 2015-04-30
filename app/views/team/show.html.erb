@@ -1,0 +1,4 @@
+<% @team.pokemons.each do |poke| %>
+  <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle" %>
+  <%= poke.name %>
+<% end %>
