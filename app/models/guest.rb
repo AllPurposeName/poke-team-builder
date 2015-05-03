@@ -9,4 +9,8 @@ class Guest
   def nil?
     "layouts/welcome"
   end
+
+  def team
+    Openstruct.new({id: 9999999})
+  end
 end

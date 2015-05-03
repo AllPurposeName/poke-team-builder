@@ -1,5 +1,6 @@
 class CurrentUser
-  attr_reader :user, :partial, :id
+  attr_reader :partial, :id
+  attr_accessor :user
 
   def initialize(user)
     @user = user || Guest.new
