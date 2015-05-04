@@ -8,7 +8,7 @@
   </div>
   <div class="row poke-display">
     <% @pokemon.each do |poke| %>
-      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon" %>
+      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", data: { 'ng-mouseover' => 'mouseOver($event)'  } %>
       <%= link_to "#{poke.name}", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
     <% end %>
   </div>

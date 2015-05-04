@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'responders'
 gem 'angular-rails-templates'
 gem 'bower-rails'
 gem 'omniauth-twitter'
@@ -23,17 +24,17 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'pokegem'
 
+gem 'awesome_print'
+gem 'better_errors'
 # gem 'capistrano-rails', group: :development
 
 gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
 gem 'byebug'
-gem 'awesome_print'
 gem 'capybara'
 gem 'launchy'
 gem 'pry'
-gem 'better_errors'
 gem 'brakeman', :require => false
 gem 'mocha'
 gem 'web-console', '~> 2.0'
