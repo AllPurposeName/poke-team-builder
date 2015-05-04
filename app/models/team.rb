@@ -13,9 +13,10 @@ class Team < ActiveRecord::Base
   end
 
   def remove(pokemon_id)
-    self.pokemon_teams.delete(PokemonTeam.find_by(pokemon_id: pokemon_id))
+    self.pokemon_teams.destroy(PokemonTeam.find_by(pokemon_id: pokemon_id))
   end
 
+###
   def total_hit_points
     self.pokemons.reduce(0) do |total, poke|
       total + poke.hit_points
@@ -51,6 +52,7 @@ class Team < ActiveRecord::Base
       total += poke.speed
     end
   end
+###
 
   private
 

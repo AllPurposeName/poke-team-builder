@@ -1,12 +1,14 @@
 <div class="container-fluid">
   <div class="row team-row">
     <div class="col-md-6">
-      PO PO PO PO PO PO
+      <% current_user.team_ball.each do |ball| %>
+        <%= image_tag ball, class: "pokeball" %>
+      <% end %>
     </div>
   </div>
   <div class="row poke-display">
     <% @pokemon.each do |poke| %>
-      <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle" %>
+      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon" %>
       <%= link_to "#{poke.name}", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
     <% end %>
   </div>

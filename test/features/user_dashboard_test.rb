@@ -15,4 +15,17 @@ class UserDashboardTest < ActionController::TestCase
     assert page.has_content?(pokemon3.name)
     assert page.has_content?(pokemon4.name)
   end
+
+  test "As a user with a team I see a pokemon's benefit or detriment to my team composition" do
+    #user = User.find_or_create_from_omniauth(OmniAuth.config.mock_auth[:twitter])
+    login_user
+    pokemon1 = Pokemon.make_new(Pokegem.get_obj "pokemon", 1)
+    visit '/'
+    click_link_or_button(pokemon1.name)
+    visit '/'
+
+    within(".#{pokemon1.name}-stats") do
+      assert page.has_content?("down")
+    end
+  end
 end

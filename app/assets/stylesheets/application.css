@@ -15,6 +15,14 @@
  *= require_self
  */
 
+.pokeball {
+  max-height: 50px;
+}
+
+.pokemon {
+  min-height: 286px;
+}
+
 
 #header {
   background-color:black;
