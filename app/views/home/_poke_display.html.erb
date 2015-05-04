@@ -1,0 +1,6 @@
+<div class="row poke-display">
+  <% @pokemon.each do |poke| %>
+    <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle" %>
+    <%= link_to "#{poke.name}", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
+  <% end %>
+</div>

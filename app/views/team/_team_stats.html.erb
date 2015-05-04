@@ -1,0 +1,31 @@
+  <table class="table table-hover">
+    <tr>
+      <th>Name &nbsp; &nbsp; &nbsp;</th>
+      <th>Hit Points</th>
+      <th>Attack</th>
+      <th>Defense</th>
+      <th>Special Attack</th>
+      <th>Special Defense</th>
+      <th>Speed</th>
+    </tr>
+
+<% @team.pokemons.each do |poke| %>
+  <tr>
+  <th><%= poke.name%></th>
+  <th><%= poke.hit_points%></th>
+  <th><%= poke.attack%></th>
+  <th><%= poke.defense%></th>
+  <th><%= poke.special_attack%></th>
+  <th><%= poke.special_defense%></th>
+  <th><%= poke.speed%></th>
+  </tr>
+<% end %>
+  <tr>
+  <th>Team Totals</th>
+  <th><%= @team.total_hit_points%></th>
+  <th><%= @team.total_attack%></th>
+  <th><%= @team.total_defense%></th>
+  <th><%= @team.total_special_attack%></th>
+  <th><%= @team.total_special_defense%></th>
+  <th><%= @team.total_speed%></th>
+  </tr>

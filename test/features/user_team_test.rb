@@ -2,11 +2,11 @@ require 'test_helper'
 
 class UserTeamTest < ActionController::TestCase
   include Capybara::DSL
+
   test "As a user I can add pokemon to me team and see them on the team page" do
-    login_user
     pokemon1 = Pokemon.make_new(Pokegem.get_obj "pokemon", rand(500))
+    login_user
     visit '/'
-    save_and_open_page
     within(".poke-display") do
       click_link_or_button ("#{pokemon1.name}")
     end
@@ -19,11 +19,10 @@ class UserTeamTest < ActionController::TestCase
     pokemon1 = Pokemon.make_new(Pokegem.get_obj "pokemon", rand(500))
     user.team.pokemons << pokemon1
 
-    visit '/team'
+    visit '/'
+    click_link_or_button("My Team")
     assert page.has_content?(pokemon1.name)
-    within(".poke-display") do
-      click_link_or_button ("#{pokemon1.name}")
-    end
+    click_link_or_button (pokemon1.name)
 
     refute page.has_content?(pokemon1.name)
   end

@@ -1,4 +1,17 @@
-<% @team.pokemons.each do |poke| %>
-  <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle" %>
-  <%= link_to "#{poke.name}", remove_team_path(poke: poke), method: :delete, class: "remove-#{poke.name}-to-team" %>
-<% end %>
+<div class="container-fluid">
+  <div class="row team-row">
+    <div class="col-md-6">
+      <% current_user.team_ball.each do |ball| %>
+        <%= image_tag ball, class: "pokeball" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row poke-display">
+    <% @team.pokemons.each do |poke| %>
+      <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle pokemon" %>
+      <%= link_to "#{poke.name}", remove_team_path(poke: poke), method: :delete, class: "remove-#{poke.name}-from-team" %>
+    <% end %>
+  </div>
+  <%= render "team_stats" %>
+</div>
+</div>
