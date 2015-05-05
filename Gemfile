@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'draper', '~> 1.3'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'rails', '4.2.0'
