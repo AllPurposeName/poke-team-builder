@@ -1,14 +1,15 @@
-<div class="container-fluid">
+<div ng-app="pokemonApp" ng-controller="homeController" class="container-fluid">
   <div class="row team-row">
     <div class="col-md-6">
       <% current_user.team_ball.each do |ball| %>
         <%= image_tag ball, class: "pokeball" %>
       <% end %>
+      {{ hello }}
     </div>
   </div>
   <div class="row poke-display">
     <% @pokemon.each do |poke| %>
-      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon" %>
+      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseOver": "showStats(#{poke.id})" %>
       <%= link_to "#{poke.name}", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
     <% end %>
   </div>

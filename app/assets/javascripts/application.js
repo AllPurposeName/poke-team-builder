@@ -14,5 +14,6 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.easing
+//= require angular
 //= require bootstrap-sprockets
 //= require_tree .

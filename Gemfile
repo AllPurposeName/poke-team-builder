@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'angularjs-rails'
 gem 'draper', '~> 1.3'
 gem 'omniauth-twitter'
 gem 'figaro'
