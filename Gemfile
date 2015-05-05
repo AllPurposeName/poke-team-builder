@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'responders'
+gem 'angular-rails-templates'
+gem 'bower-rails'
 gem 'draper', '~> 1.3'
 gem 'omniauth-twitter'
 gem 'figaro'
@@ -8,7 +11,7 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-# gem 'therubyracer', platforms: :ruby
+ gem 'therubyracer', platforms: :ruby
 gem 'google-api-client'
 gem 'omniauth-gplus', '~> 2.0'
 gem 'jquery-rails'
@@ -22,19 +25,19 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'pokegem'
 
+gem 'awesome_print'
+gem 'better_errors'
 # gem 'capistrano-rails', group: :development
 
 gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
 gem 'byebug'
-gem 'awesome_print'
 gem 'capybara'
 gem 'launchy'
 gem 'pry'
-gem 'better_errors'
 gem 'brakeman', :require => false
 gem 'mocha'
 gem 'web-console', '~> 2.0'
-gem 'spring'
+gem 'spring', '~> 1.3.5'
 end
