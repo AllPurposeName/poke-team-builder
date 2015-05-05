@@ -22,10 +22,10 @@
 <% end %>
   <tr>
   <th>Team Totals</th>
-  <th><%= @team.total_hit_points%></th>
-  <th><%= @team.total_attack%></th>
-  <th><%= @team.total_defense%></th>
-  <th><%= @team.total_special_attack%></th>
-  <th><%= @team.total_special_defense%></th>
-  <th><%= @team.total_speed%></th>
+  <th><%= @team.team_total[:hit_points]%></th>
+  <th><%= @team.team_total[:attack]%></th>
+  <th><%= @team.team_total[:defense]%></th>
+  <th><%= @team.team_total[:special_attack]%></th>
+  <th><%= @team.team_total[:special_defense]%></th>
+  <th><%= @team.team_total[:speed]%></th>
   </tr>

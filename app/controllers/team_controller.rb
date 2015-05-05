@@ -1,6 +1,6 @@
 class TeamController < ApplicationController
   def show
-    @team = Team.find(params[:team])
+    @team = Team.find(params[:team]).decorate
   end
 
   def add
