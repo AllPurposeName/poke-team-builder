@@ -1,12 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'responders'
-<<<<<<< HEAD
 gem 'angularjs-rails'
-=======
-gem 'angular-rails-templates'
-gem 'bower-rails'
->>>>>>> master
 gem 'draper', '~> 1.3'
 gem 'omniauth-twitter'
 gem 'figaro'
