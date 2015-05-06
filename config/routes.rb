@@ -10,4 +10,11 @@ Rails.application.routes.draw do
   delete '/team/', to: "team#remove", as: "remove_team"
   get '/team/', to: "team#show"
   get '/help/', to: "home#help", as: "help"
+
+  namespace :api do
+    namespace :v1 do
+      get '/pokemons', to: "pokemon#index"
+      get '/pokemon', to: "pokemon#show"
+    end
+  end
 end

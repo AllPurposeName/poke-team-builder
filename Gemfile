@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'responders'
 gem 'angularjs-rails'
 gem 'draper', '~> 1.3'
 gem 'omniauth-twitter'

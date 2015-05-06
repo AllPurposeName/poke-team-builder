@@ -20,7 +20,9 @@
 }
 
 .pokemon {
-  min-height: 286px;
+  margin-left: 5vw;
+  height: 33vh;
+  width: 33vh;
 }
 
 

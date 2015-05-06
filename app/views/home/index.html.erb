@@ -9,7 +9,12 @@
   </div>
   <div class="row poke-display">
     <% @pokemon.each do |poke| %>
-      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseOver": "showStats(#{poke.id})" %>
+      <div class="pokemon-display pokemon col-md-3 img-circle" ng-show="isShown(<%=poke.id%>)">
+        <div class="poke-text">
+        <%= poke.name %>
+        </div>
+      </div>
+      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})" %>
       <%= link_to "#{poke.name}", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
     <% end %>
   </div>
