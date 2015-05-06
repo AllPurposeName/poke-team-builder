@@ -1,6 +1,5 @@
 class Api::V1::PokemonController < ApplicationController
   respond_to :json
-
   def show
     @pokemon = Pokemon.find_by(id: params[:pokemon_id])
     respond_with @pokemon
