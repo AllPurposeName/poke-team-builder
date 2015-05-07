@@ -1,12 +1,19 @@
 <% @pokemon.each do |poke| %>
   <div class="pokemon-display pokemon col-md-3 img-circle" ng-show="isShown(<%=poke.id%>)">
     <div class="poke-text">
+      <br>
       <p class="<%= poke.div.attack %> first-stat">attack: <%=poke.compare.attack%></p>
+      <br>
       <p class=<%= poke.div.special_attack %>>sp attack: <%=poke.compare.special_attack%></p>
+      <br>
       <p class=<%= poke.div.defense %>>defense: <%= poke.compare.defense %></p>
+      <br>
       <p class=<%= poke.div.special_defense %>>sp defense: <%= poke.compare.special_defense %></p>
+      <br>
       <p class=<%= poke.div.speed %>>speed: <%=poke.compare.speed%></p>
+      <br>
       <p class=<%= poke.div.hit_points %>>hit points: <%= poke.compare.hit_points %></p>
+      <br>
       <% if current_user.team.full? %>
         <p class="full-team">Your Team is Full!</p>
       <% else %>
