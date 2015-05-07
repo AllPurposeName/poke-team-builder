@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'responders'
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
 gem 'draper', '~> 1.3'
 gem 'omniauth-twitter'
 gem 'figaro'

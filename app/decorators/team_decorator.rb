@@ -14,6 +14,6 @@ class TeamDecorator < Draper::Decorator
   end
 
   def average(attribute)
-    self.total(attribute - self.pokemons.count)
+    self.total(attribute) / self.pokemons.count
   end
 end

@@ -11,14 +11,16 @@
     <% @pokemon.each do |poke| %>
       <div class="pokemon-display pokemon col-md-3 img-circle" ng-show="isShown(<%=poke.id%>)">
         <div class="poke-text">
-          <table border="0" cellspacing="5" cellpadding="5">
-            <tr><td><%=poke.compare.attack%>: attack</td><td>defense :<%= poke.compare.defense %></td></tr>
-            <tr><td><%=poke.compare.special attack%>: special attack</td><td>special defense :<%= poke.compare.special_defense %></td></tr>
-            <tr><td><%=poke.compare.speed%>: speed</td><td>hit points :<%= poke.compare.hit_points %></td></tr>
-          </table>
+          &nbsp
+          <p class=<%= poke.div.attack %> >attack: <%=poke.compare.attack%></p>
+          <p class=<%= poke.div.special_attack %>>sp attack: <%=poke.compare.special_attack%></p>
+          <p class=<%= poke.div.defense %>>defense: <%= poke.compare.defense %></p>
+          <p class=<%= poke.div.special_defense %>>sp defense: <%= poke.compare.special_defense %></p>
+          <p class=<%= poke.div.speed %>>speed: <%=poke.compare.speed%></p>
+          <p class=<%= poke.div.hit_points %>>hit points: <%= poke.compare.hit_points %></p>
         </div>
       </div>
-      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})" %>
+      <%= image_tag "#{poke.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})" %>
       <%= link_to "#{poke.name}", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
     <% end %>
   </div>

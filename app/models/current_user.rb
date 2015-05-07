@@ -16,7 +16,7 @@ class CurrentUser
   end
 
   def team
-    user.team.id
+    user.team
   end
 
   def team_ball

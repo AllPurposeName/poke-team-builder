@@ -15,7 +15,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li> <%= image_tag current_user.image, class: "img-circle" %></li>
       <li> <%= link_to "Help", help_path, id: "nav-font" %></li>
-      <li> <%= link_to "My Team", team_path(team: current_user.team), id: "nav-font" %> </li>
+      <li> <%= link_to "My Team", team_path(team: current_user.team.id), id: "nav-font" %> </li>
       <li> <%= link_to "Log Out", exit_path, id: "nav-font" %> </li>
     </ul>
   </div>
