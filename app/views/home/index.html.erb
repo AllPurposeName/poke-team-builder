@@ -10,8 +10,7 @@
     <% @pokemon.each do |poke| %>
       <div class="pokemon-display pokemon col-md-3 img-circle" ng-show="isShown(<%=poke.id%>)">
         <div class="poke-text">
-          &nbsp
-          <p class=<%= poke.div.attack %> >attack: <%=poke.compare.attack%></p>
+          <p class="<%= poke.div.attack %> first-stat">attack: <%=poke.compare.attack%></p>
           <p class=<%= poke.div.special_attack %>>sp attack: <%=poke.compare.special_attack%></p>
           <p class=<%= poke.div.defense %>>defense: <%= poke.compare.defense %></p>
           <p class=<%= poke.div.special_defense %>>sp defense: <%= poke.compare.special_defense %></p>
