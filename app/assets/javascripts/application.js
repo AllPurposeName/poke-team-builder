@@ -12,8 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.easing
-//= require angular
 //= require bootstrap-sprockets
 //= require angular
 //= require angular-rails-templates
