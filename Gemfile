@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'twitter'
 gem 'responders'
 gem 'angularjs-rails'
 gem 'angular-rails-templates'

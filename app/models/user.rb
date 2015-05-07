@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
     user.uid        = auth.uid
     user.name       = auth.info.name
     user.image      = auth.info.image
+    user.token      = auth.credentials.token
+    user.secret     = auth.credentials.secret
     user.save
     user
   end

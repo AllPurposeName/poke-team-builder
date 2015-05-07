@@ -28,4 +28,32 @@ class CurrentUser
     end
     balls
   end
+
+  def poke_display
+   if team.empty? || team.is_a?(OpenStruct)
+     "home/new_poke_display"
+   else
+     "home/poke_display"
+   end
+  end
+
+  def nav_bar
+    if team.empty?
+      "layouts/teamless_nav"
+    else
+      "layouts/nav"
+    end
+  end
+
+  def pokemon_names
+    team.pokemon_names
+  end
+
+  def token
+   user.token
+  end
+
+  def secret
+   user.secret
+  end
 end

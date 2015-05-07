@@ -1,5 +1,3 @@
-if(window.location.pathname === '/') {
-
   var app = angular.module('pokemonApp', []);
 
 
@@ -32,4 +30,3 @@ if(window.location.pathname === '/') {
       return $scope.shownId == id;
     }
   });
-}

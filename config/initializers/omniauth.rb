@@ -5,6 +5,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     :authorize_params => {
     :force_login => 'true',
   }
-
   }
 end

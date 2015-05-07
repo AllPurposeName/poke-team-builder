@@ -1,5 +1,5 @@
-<div class="index-<%=rand(10) %>">
-  <%= render "layouts/nav" %>
+<div class="index">
+  <%= render current_user.nav_bar %>
 
   <div id="section container-fluid">
     <%= yield %>

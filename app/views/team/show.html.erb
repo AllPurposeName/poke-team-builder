@@ -1,17 +1,30 @@
-<div class="container-fluid">
+<div ng-app="pokemonApp" ng-controller="homeController" class="container-fluid">
   <div class="row team-row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <% current_user.team_ball.each do |ball| %>
         <%= image_tag ball, class: "pokeball" %>
       <% end %>
     </div>
+    <div class="col-md-4">
+      <%= link_to "Release All Pokemon From Team", clear_team_path, method: :delete %>
+    </div>
+    <div class="col-md-4">
+      <%#= link_to (image_path "twitter_logo.png"), tweet_path, method: :post %>
+    </div>
   </div>
-  <div class="row poke-display">
+  <div class="row poke-display col-md-7">
     <% @team.pokemons.each do |poke| %>
-      <%= image_tag "#{poke.sprites.first.image}", class: "col-md-3 pokemon-display img-circle pokemon" %>
-      <%= link_to "#{poke.name}", remove_team_path(poke: poke), method: :delete, class: "remove-#{poke.name}-from-team" %>
+      <div class="pokemon-display pokemon col-md-6 img-circle" ng-show="isShown(<%=poke.id%>)">
+        <div class="delete-text">
+          <br><br><br><br>
+          <%= link_to "Release From Team", remove_team_path(poke: poke), method: :delete, class: "remove-#{poke.name}-from-team" %>
+        </div>
+      </div>
+      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})" %>
     <% end %>
   </div>
-  <%= render "team_stats" %>
+  <div class="col-md-4">
+    <%= render "team_stats" %>
+  </div>
 </div>
 </div>
