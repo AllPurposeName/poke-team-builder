@@ -15,6 +15,15 @@
  *= require_self
  */
 
+
+body {
+  cursor: url("cursor_ball.png"), 100%;
+}
+
+a {
+  cursor: url("cursor_open.png"), 100%;
+}
+
 .pokeball {
   max-height: 50px;
 }
@@ -47,4 +56,8 @@
   float:left;
   padding:10px;
   padding-bottom: 70px;
+  cursor: url("cursor_ball.png")
+}
+#section a {
+  cursor: url("open_ball.png")
 }
