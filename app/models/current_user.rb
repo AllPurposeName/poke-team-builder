@@ -36,4 +36,12 @@ class CurrentUser
      "home/poke_display"
    end
   end
+
+  def nav_bar
+    if team.empty?
+      "layouts/teamless_nav"
+    else
+      "layouts/nav"
+    end
+  end
 end

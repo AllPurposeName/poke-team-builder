@@ -24,6 +24,10 @@ a {
   cursor: url("cursor_open.png"), 100%;
 }
 
+.help {
+  font-size: 24pt;
+}
+
 .pokeball {
   max-height: 50px;
 }
