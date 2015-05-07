@@ -40,39 +40,38 @@ class PokemonComparisonDecorator < Draper::Decorator
   end
 
   def id
-   object.id
+    object.id
   end
 
   def image
-   object.sprites.first.image
+    object.sprites.first.image
   end
 
   def name
-   object.name
+    object.name
   end
 
   def attack
-   object.attack
+    object.attack
   end
 
   def defense
-   object.defense
+    object.defense
   end
 
   def special_defense
-   object.special_defense
+    object.special_defense
   end
 
   def special_attack
-   object.special_attack
+    object.special_attack
   end
 
   def speed
-   object.speed
+    object.speed
   end
 
   def hit_points
-   object.hit_points
+    object.hit_points
   end
-
 end

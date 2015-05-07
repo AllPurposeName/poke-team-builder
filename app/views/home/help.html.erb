@@ -1,15 +1,20 @@
 <div class="help col-md-6 col-md-offset-3">
-<h1>Instructions</h1>
-<ul>
+  <h1>Instructions</h1>
+  <ul>
 
-  <li>
-Add pokemon to your team.
-</li>
-  <li>
-Browse other pokemon and easily compare their potential stat increases with the rest of your team.
-</li>
-  <li>
-Once you've built your team to your liking, tweet it out to your followers!
-</li>
-</ul>
+    <li>
+    Add pokemon to your team.
+    </li>
+    <li>
+    Browse other pokemon and easily compare their potential stat increases with the rest of your team.
+    </li>
+    <li>
+    Once you've built your team to your liking, tweet it out to your followers!
+    </li>
+  </ul>
+  <%= link_to "GET GOING!", root_path, class: "col-md-8 col-md-offset-4 get-going" %>
+  <br>
 </div>
+  <p class="col-md-3 choose-me">Choose me!
+  <%= link_to (image_tag @pokemon.image), add_team_path(poke: @pokemon.id), method: :put, class: "add-#{@pokemon.name}-to-team, pokemon" %>
+</p>
