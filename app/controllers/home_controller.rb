@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
   respond_to :html, :json
   def index
-    @pokemon = Pokemon.includes(:sprites).includes(:moves).all
+    #@articles = ArticleDecorator.decorate_collection(Article.all)
+    #@articles = Article.popular.decorate
+    @pokemon = PokemonComparisonDecorator.decorate_collection(Pokemon.includes(:sprites).includes(:moves).all)
+    @pokemon.map { |poke| poke.compare_team(current_user.team) }
     respond_with @pokemon
   end
 
@@ -12,9 +15,5 @@ class HomeController < ApplicationController
   end
 
   def help
-  end
-
-  def favorites
-  @favorites = {"Tale of Two Cities" => 3, "A Study in Scarlet" => 2, "Pride and Prejudice" => 1, "Storm of Swords" => 8284}
   end
 end
