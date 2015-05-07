@@ -10,8 +10,9 @@ class TeamController < ApplicationController
   end
 
   def remove
-    team = Team.find_by(user_id: current_user.user.id)
+    team = current_user.team
     team.remove(params[:poke])
     redirect_to team_path(team: team)
   end
+
 end

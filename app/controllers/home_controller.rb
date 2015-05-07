@@ -16,4 +16,9 @@ class HomeController < ApplicationController
 
   def help
   end
+
+  def clear
+    current_user.team.remove_all
+    redirect_to root_path
+  end
 end

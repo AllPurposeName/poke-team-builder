@@ -16,8 +16,16 @@ class Team < ActiveRecord::Base
     self.pokemon_teams.destroy(PokemonTeam.find_by(pokemon_id: pokemon_id))
   end
 
+  def remove_all
+    self.pokemon_teams.destroy_all
+  end
+
   def full?
     count >= 6
+  end
+
+  def empty?
+    count == 0
   end
 end
 

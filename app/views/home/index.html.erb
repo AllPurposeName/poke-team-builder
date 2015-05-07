@@ -7,23 +7,6 @@
     </div>
   </div>
   <div class="row poke-display">
-    <% @pokemon.each do |poke| %>
-      <div class="pokemon-display pokemon col-md-3 img-circle" ng-show="isShown(<%=poke.id%>)">
-        <div class="poke-text">
-          <p class="<%= poke.div.attack %> first-stat">attack: <%=poke.compare.attack%></p>
-          <p class=<%= poke.div.special_attack %>>sp attack: <%=poke.compare.special_attack%></p>
-          <p class=<%= poke.div.defense %>>defense: <%= poke.compare.defense %></p>
-          <p class=<%= poke.div.special_defense %>>sp defense: <%= poke.compare.special_defense %></p>
-          <p class=<%= poke.div.speed %>>speed: <%=poke.compare.speed%></p>
-          <p class=<%= poke.div.hit_points %>>hit points: <%= poke.compare.hit_points %></p>
-          <% if current_user.team.full? %>
-            <p class="full-team">Your Team is Full!</p>
-          <% else %>
-            <%= link_to "Add to Team", add_team_path(poke: poke), method: :put, class: "add-#{poke.name}-to-team" %>
-          <% end %>
-        </div>
-      </div>
-      <%= image_tag "#{poke.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})" %>
-    <% end %>
+      <%= render current_user.poke_display %>
   </div>
 </div>

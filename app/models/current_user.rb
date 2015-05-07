@@ -28,4 +28,12 @@ class CurrentUser
     end
     balls
   end
+
+  def poke_display
+   if team.empty? || team.is_a?(OpenStruct)
+     "home/new_poke_display"
+   else
+     "home/poke_display"
+   end
+  end
 end
