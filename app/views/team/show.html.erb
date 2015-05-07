@@ -20,7 +20,7 @@
           <%= link_to "Release From Team", remove_team_path(poke: poke), method: :delete, class: "remove-#{poke.name}-from-team" %>
         </div>
       </div>
-      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", "ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})" %>
+      <%= image_tag "#{poke.sprites.first.image}", class: "pokemon-display col-md-3 img-circle pokemon", data: {"ng-mouseEnter" => "showStats(#{poke.id})", "ng-hide" => "isShown(#{poke.id})"} %>
     <% end %>
   </div>
   <div class="col-md-4">
