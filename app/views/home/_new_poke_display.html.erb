@@ -14,5 +14,5 @@
       <% end %>
     </div>
   </div>
-  <%= image_tag "#{poke.image}", class: "pokemon-display col-md-3 img-circle pokemon", data: {"ng-mouseEnter": "showStats(#{poke.id})", "ng-hide": "isShown(#{poke.id})"} %>
+  <%= image_tag "#{poke.image}", class: "pokemon-display col-md-3 img-circle pokemon", data: {"ng-mouseEnter" => "showStats(#{poke.id})", "ng-hide" => "isShown(#{poke.id})"} %>
 <% end %>
