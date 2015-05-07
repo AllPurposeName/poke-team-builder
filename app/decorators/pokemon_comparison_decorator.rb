@@ -27,10 +27,8 @@ class PokemonComparisonDecorator < Draper::Decorator
 
     if stat_diff > 20
       "big_green"
-    elsif stat_diff > 1
+    elsif stat_diff > 0
       "small_green"
-    elsif stat_diff == 0
-      "equal"
     elsif stat_diff < 20
       "big_red"
     elsif stat_diff < 0

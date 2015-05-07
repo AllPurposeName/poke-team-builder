@@ -1,31 +1,31 @@
-  <table class="table table-hover">
-    <tr>
-      <th>Name &nbsp; &nbsp; &nbsp;</th>
-      <th>Hit Points</th>
-      <th>Attack</th>
-      <th>Defense</th>
-      <th>Special Attack</th>
-      <th>Special Defense</th>
-      <th>Speed</th>
-    </tr>
+<table class="table table-hover">
+<tr>
+  <th class="big_green">Name &nbsp; &nbsp; &nbsp;</th>
+  <th class="big_green">Hit Points</th>
+  <th class="big_green">Attack</th>
+  <th class="big_green">Defense</th>
+  <th class="big_green">Special Attack</th>
+  <th class="big_green">Special Defense</th>
+  <th class="big_green">Speed</th>
+</tr>
 
 <% @team.pokemons.each do |poke| %>
   <tr>
-  <th><%= poke.name%></th>
-  <th><%= poke.hit_points%></th>
-  <th><%= poke.attack%></th>
-  <th><%= poke.defense%></th>
-  <th><%= poke.special_attack%></th>
-  <th><%= poke.special_defense%></th>
-  <th><%= poke.speed%></th>
+    <th class="small_green"><%= poke.name%></th>
+    <th class="small_green"><%= poke.hit_points%></th>
+    <th class="small_green"><%= poke.attack%></th>
+    <th class="small_green"><%= poke.defense%></th>
+    <th class="small_green"><%= poke.special_attack%></th>
+    <th class="small_green"><%= poke.special_defense%></th>
+    <th class="small_green"><%= poke.speed%></th>
   </tr>
 <% end %>
-  <tr>
-  <th>Team Totals</th>
-  <th><%= @team.team_total.hit_points%></th>
-  <th><%= @team.team_total.attack%></th>
-  <th><%= @team.team_total.defense%></th>
-  <th><%= @team.team_total.special_attack%></th>
-  <th><%= @team.team_total.special_defense%></th>
-  <th><%= @team.team_total.speed%></th>
-  </tr>
+<tr>
+  <th class="big_red">Team Totals</th>
+  <th class="big_green"><%= @team.team_total.hit_points%></th>
+  <th class="big_green"><%= @team.team_total.attack%></th>
+  <th class="big_green"><%= @team.team_total.defense%></th>
+  <th class="big_green"><%= @team.team_total.special_attack%></th>
+  <th class="big_green"><%= @team.team_total.special_defense%></th>
+  <th class="big_green"><%= @team.team_total.speed%></th>
+</tr>
