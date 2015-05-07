@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   delete '/team/', to: "team#remove", as: "remove_team"
   get '/team/', to: "team#show"
 
+  post '/tweet/', to: "tweet#create"
+
   namespace :api do
     namespace :v1 do
       get '/pokemons', to: "pokemon#index"

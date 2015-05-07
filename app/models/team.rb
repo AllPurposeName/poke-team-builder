@@ -27,5 +27,11 @@ class Team < ActiveRecord::Base
   def empty?
     count == 0
   end
+
+  def pokemon_names
+    string = ""
+    pokemons.each { |p| string += p.name; string += " "  }
+    string.chop!
+  end
 end
 

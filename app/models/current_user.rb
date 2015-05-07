@@ -44,4 +44,16 @@ class CurrentUser
       "layouts/nav"
     end
   end
+
+  def pokemon_names
+    team.pokemon_names
+  end
+
+  def token
+   user.token
+  end
+
+  def secret
+   user.secret
+  end
 end
