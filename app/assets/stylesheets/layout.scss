@@ -1,26 +1,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@font-family {
-  font-family: "PokemonSolid";
-  src: local("*./fonts/PokemonSolid.ttf")
+
+.choose-me{
+  font-size: 18pt;
 }
 
-body {
+.get-going{
+  font-size: 24pt;
 }
 
 .fronter-page{
-  height:64vh;
-  width: 98.8vw;
+  height:60vh;
+  width: 100vw;
+  margin-right: 15px;
+  padding-right: 0;
 }
 
 .bottom-box {
   background-image: image-url("bottombox.png");
   display: block;
   background-size: cover;
-  height: 33.5vh;
+  height: 39.5vh;
   width: 100vw;
-  background-repeat: no-repeat;
 }
 
 .front-description {
@@ -31,6 +33,9 @@ body {
 .attack-menu-btn {
   text-align: 58vh, 25vh;
   padding-left: 25vh;
+}
 
+.bottom-content{
+padding-left: 50px;
 }
 

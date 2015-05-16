@@ -13,6 +13,8 @@ class HomeController < ApplicationController
   end
 
   def help
+    offset = rand(Pokemon.count)
+    @pokemon = PokemonComparisonDecorator.decorate_collection(Pokemon.includes(:sprites).includes(:moves).offset(offset)).first
   end
 
   def clear
