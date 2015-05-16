@@ -19,7 +19,7 @@ class Seed
 
 
   def generate_pokemon
-    710.times do |iteration|
+    40.times do |iteration|
       Pokemon.make_new(Pokegem.get_obj "pokemon", (iteration + 1))
       puts "Created #{Pokemon.all.last} number #{iteration + 1}"
     end

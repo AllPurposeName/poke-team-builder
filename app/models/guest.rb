@@ -14,3 +14,4 @@ class Guest
     OpenStruct.new({id: 9999999, count: 0})
   end
 end
+
